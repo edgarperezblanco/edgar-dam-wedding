@@ -117,12 +117,32 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const heroVideo = document.querySelector(".hero-video")
     
     if (heroVideo) {
-      // Ensure video plays on mobile devices
-      heroVideo.addEventListener("loadedmetadata", () => {
+      // Force play on iOS Safari
+      const playVideo = () => {
         heroVideo.play().catch((error) => {
           console.log("Video autoplay failed:", error)
-          // Fallback: show a play button or handle gracefully
         })
+      }
+      
+      // Try to play immediately
+      playVideo()
+      
+      // Try to play on first user interaction
+      const handleFirstInteraction = () => {
+        playVideo()
+        document.removeEventListener("touchstart", handleFirstInteraction)
+        document.removeEventListener("click", handleFirstInteraction)
+        document.removeEventListener("scroll", handleFirstInteraction)
+      }
+      
+      // Listen for user interactions
+      document.addEventListener("touchstart", handleFirstInteraction, { once: true })
+      document.addEventListener("click", handleFirstInteraction, { once: true })
+      document.addEventListener("scroll", handleFirstInteraction, { once: true })
+      
+      // Ensure video plays on loadedmetadata
+      heroVideo.addEventListener("loadedmetadata", () => {
+        playVideo()
       })
       
       // Pause video when page is not visible (save battery)
@@ -130,14 +150,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         if (document.hidden) {
           heroVideo.pause()
         } else {
-          heroVideo.play().catch(() => {
-            // Ignore autoplay errors when resuming
-          })
+          playVideo()
         }
       })
       
       // Optimize video loading
       heroVideo.preload = "auto"
+      heroVideo.muted = true
+      heroVideo.playsInline = true
     }
   })
   
