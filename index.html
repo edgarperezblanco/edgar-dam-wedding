@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Dámaris & Edgar - 23 de Mayo 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-link">Inicio</a>
+            <a href="#details" class="nav-link">Detalles</a>
+            <a href="#rsvp" class="nav-link">Confirmar</a>
+            <a href="#gifts" class="nav-link">Regalos</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./images/edgar-dam-muelle.mov" type="video/quicktime">
+            <source src="./images/edgar-dam-muelle.mp4" type="video/mp4">
+            Tu navegador no soporta videos de fondo.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="heart-icon">♥</div>
+            <h1 class="hero-title">Dámaris & Edgar</h1>
+            <p class="hero-date">23 de Mayo, 2026</p>
+            <div class="scroll-indicator">
+                <a href="#details" class="scroll-arrow">↓</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Historia</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="./images/foto-pareja.jpeg" alt="Foto de la pareja">
+                </div>
+                <div class="story-text">
+                    <p>Nos conocimos hace 5 años en una tarde de otoño. Lo que comenzó como una amistad casual se transformó en una historia de amor que ahora queremos celebrar con vosotros.</p>
+                    <p>Después de tantos momentos compartidos, risas, viajes y sueños, hemos decidido dar el siguiente paso en nuestra relación.</p>
+                    <p>Queremos compartir este día tan especial con las personas que más queremos. ¡Esperamos verte en nuestra boda!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="countdown-overlay"></div>
+        <div class="container">
+            <h2 class="countdown-title">Faltan</h2>
+            <div class="countdown-grid">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section id="details" class="details-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Detalles de la Boda</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">📅</div>
+                    <h3>Fecha y Hora</h3>
+                    <p class="detail-main">23 de Mayo, 2026</p>
+                    <p class="detail-sub">🕐 17:00 hrs</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">📍</div>
+                    <h3>Lugar</h3>
+                    <p class="detail-main">Torre del Pla</p>
+                    <p class="detail-sub">Ctra. de l'Ametlla</p>
+                    <p class="detail-sub">08520 Llerona, Barcelona</p>
+                </div>
+                
+                <div class="detail-card">
+                    <div class="detail-icon">👔</div>
+                    <h3>Dress Code</h3>
+                    <p class="detail-main">Formal</p>
+                    <p class="detail-sub">Evitar el color blanco</p>
+                    <p class="detail-sub">Zapatos cómodos recomendados</p>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.0364668967613!2d2.2819501!3d41.65495409999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c605a44bed8f%3A0xc7b3a87f33f79620!2sTorre%20del%20Pla!5e0!3m2!1ses!2ses!4v1749636484116!5m2!1ses!2ses"
+                    class="map-iframe"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- Transport and Accommodation -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon">🚌</div>
+                        <h3>Transporte</h3>
+                    </div>
+                    <div class="info-content">
+                        <p><strong>Autobús ida y vuelta:</strong></p>
+                        <p>Salida: 16:00 desde Plaza Mayor</p>
+                        <p>Regreso: 02:00 desde la finca</p>
+                        <p class="info-note">Indica en el RSVP si necesitas el autobús</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-header">
+                        <div class="info-icon">🏨</div>
+                        <h3>Hospedaje</h3>
+                    </div>
+                    <div class="info-content">
+                        <p><strong>Recomendaciones para invitados:</strong></p>
+                        <p>• Hotel Villa Madrid (10% descuento)</p>
+                        <p>• Casa Rural El Descanso</p>
+                        <p>• Apartamentos Centro</p>
+                        <p class="info-note">Contacta con nosotros para más información</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-button-container">
+                <button onclick="addToCalendar()" class="calendar-button">
+                    📅 Añadir al Calendario
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x320/f3f4f6/9ca3af?text=Foto+1" alt="Foto 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x340/f3f4f6/9ca3af?text=Foto+2" alt="Foto 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x360/f3f4f6/9ca3af?text=Foto+3" alt="Foto 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x380/f3f4f6/9ca3af?text=Foto+4" alt="Foto 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x400/f3f4f6/9ca3af?text=Foto+5" alt="Foto 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x420/f3f4f6/9ca3af?text=Foto+6" alt="Foto 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x440/f3f4f6/9ca3af?text=Foto+7" alt="Foto 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x460/f3f4f6/9ca3af?text=Foto+8" alt="Foto 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Confirma tu Asistencia</h2>
+                <div class="divider"></div>
+                <p>Por favor, confirma antes del 15 de Abril de 2026</p>
+            </div>
+            
+            <div class="form-container">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfkUz97AD1lg1XQgNCRHXr1D3gGSo6wsUflqtaBVmU2cO370Q/viewform?embedded=true"
+                    class="form-iframe">
+                    Cargando…
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gifts Section -->
+    <section id="gifts" class="gifts-section">
+        <div class="gifts-overlay"></div>
+        <div class="container">
+            <div class="section-header">
+                <h2>Regalos</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="gifts-card">
+                <div class="gift-icon">🎁</div>
+                <p class="gifts-intro">
+                    Vuestra presencia en nuestro día especial es el mejor regalo que podemos recibir. Sin embargo, si deseáis hacernos un obsequio, hemos preparado algunas opciones que nos ayudarán a comenzar nuestra nueva vida juntos.
+                </p>
+                
+                <div class="gifts-options">
+                    <h3>Opciones de Regalo:</h3>
+                    <div class="gift-option">
+                        <p><strong>Lista de bodas:</strong> El Corte Inglés</p>
+                    </div>
+                    <div class="gift-option">
+                        <p><strong>Contribución luna de miel:</strong></p>
+                        <div class="bank-details">
+                            <p>IBAN: ES12 3456 7890 1234 5678 9012</p>
+                            <p>Concepto: "Boda Dámaris y Edgar"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="gifts-thanks">Gracias por formar parte de nuestro día especial</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="heart-icon">♥</div>
+            <p class="footer-names">Dámaris & Edgar</p>
+            <p class="footer-date">23 de Mayo, 2026</p>
+            <p class="footer-message">¡Nos vemos en nuestra boda!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
