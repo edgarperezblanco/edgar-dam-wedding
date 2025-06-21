@@ -64,8 +64,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   // Add to Calendar function
   function addToCalendar() {
     const event = {
-      title: "Boda de Dámaris y Edgar",
-      start: "20260523T170000Z",
+      title: "Boda de Edgar y Dámaris",
+      start: "20260523T150000Z",
       end: "20260524T020000Z",
       description: "Celebración de nuestra boda",
       location: "Torre del Pla, Ctra. de l'Ametlla, 08520 Llerona, Barcelona",
@@ -160,4 +160,45 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       heroVideo.playsInline = true
     }
   })
+  
+  // Flip card logic for details section
+  function setupDetailCards() {
+    const grid = document.querySelector('.details-grid');
+    const cards = document.querySelectorAll('.detail-card');
+  
+    cards.forEach(card => {
+      card.addEventListener('click', function (e) {
+        // Solo activa si no está ya girada y no se hace click en el botón X
+        if (!card.classList.contains('flipped') && !e.target.classList.contains('close-card')) {
+          cards.forEach(c => c.classList.remove('flipped'));
+          card.classList.add('flipped');
+          grid.classList.add('overlay-active');
+          e.stopPropagation();
+        }
+      });
+      // Botón X para cerrar
+      card.querySelector('.close-card').addEventListener('click', function (e) {
+        card.classList.remove('flipped');
+        grid.classList.remove('overlay-active');
+        e.stopPropagation();
+      });
+    });
+    // Cerrar al hacer click fuera de la tarjeta
+    document.addEventListener('click', function (e) {
+      if (grid.classList.contains('overlay-active')) {
+        cards.forEach(c => c.classList.remove('flipped'));
+        grid.classList.remove('overlay-active');
+      }
+    });
+    // Evitar que el click dentro de la tarjeta cierre la tarjeta
+    cards.forEach(card => {
+      card.querySelector('.card-back').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+      card.querySelector('.card-front').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', setupDetailCards);
   

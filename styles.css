@@ -89,6 +89,7 @@
   
   .hero-content {
     animation: fadeInUp 1.5s ease-out;
+    margin-top: 4rem;
   }
   
   .heart-icon {
@@ -184,9 +185,8 @@
   /* Countdown Section */
   .countdown-section {
     padding: 5rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("./images/countdown-background.jpg") center / cover;
-    color: white;
+    background: #fff;
+    color: #222;
     text-align: center;
   }
   
@@ -194,13 +194,16 @@
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 3rem;
+    color: #222;
   }
   
   .countdown-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: end;
   }
   
   .countdown-item {
@@ -208,15 +211,16 @@
   }
   
   .countdown-number {
+    font-family: 'Menlo', 'Fira Mono', 'Consolas', monospace;
     font-size: 2.5rem;
     font-weight: 300;
     margin-bottom: 0.5rem;
-    color: #ffffff;
+    color: #222;
   }
   
   .countdown-label {
     font-size: 0.8rem;
-    color: #ffffff;
+    color: #555;
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
@@ -224,7 +228,7 @@
   /* Details Section */
   .details-section {
     padding: 6rem 0;
-    background: white;
+    background: #f5f1eb;
   }
   
   .details-grid {
@@ -239,8 +243,11 @@
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .detail-card:hover {
@@ -248,20 +255,30 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
   
+  .detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 1.2rem;
+  }
+  
   .detail-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0;
   }
   
   .detail-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    font-size: 1.35rem;
+    font-weight: 600;
     color: #374151;
+    letter-spacing: 0.01em;
   }
   
   .detail-main {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    font-weight: 500;
     color: #374151;
     margin-bottom: 0.5rem;
   }
@@ -269,6 +286,26 @@
   .detail-sub {
     color: #6b7280;
     margin-bottom: 0.25rem;
+    font-size: 0.98rem;
+  }
+  
+  .detail-list {
+    margin: 0.5rem 0 0 0.2rem;
+    padding-left: 1.2rem;
+    color: #6b7280;
+    font-size: 0.98rem;
+    list-style: disc inside;
+  }
+  
+  .detail-list li {
+    margin-bottom: 0.2rem;
+  }
+  
+  .detail-note {
+    font-size: 0.95rem;
+    color: #b45309;
+    font-style: italic;
+    margin-top: 0.5rem;
   }
   
   /* Map */
@@ -404,9 +441,8 @@
   /* Gifts Section */
   .gifts-section {
     padding: 6rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("https://via.placeholder.com/1920x800/8b5cf6/ffffff?text=Gifts+Background") center / cover;
-    color: white;
+    background: #f5f1eb;
+    color: #222;
   }
   
   .gifts-card {
@@ -460,8 +496,8 @@
   
   /* Footer */
   .footer {
-    background: #1f2937;
-    color: white;
+    background: #fff;
+    color: #222;
     padding: 3rem 0;
     text-align: center;
   }
@@ -473,9 +509,11 @@
   }
   
   .footer-names {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-family: 'Blank Script', 'Playfair Display', 'Crimson Text', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: normal;
     margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
   }
   
   .footer-date {
@@ -551,30 +589,25 @@
     }
   
     .countdown-title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
     }
   
     .countdown-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      max-width: 400px;
-    }
-  
-    .countdown-item {
-      padding: 1.5rem 1rem;
+      gap: 1.2rem;
     }
   
     .countdown-number {
-      font-size: 2.5rem;
+      font-size: 1.7rem;
     }
   
     .countdown-label {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   
     .details-grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   
     .info-grid {
@@ -601,27 +634,25 @@
     }
   
     .countdown-title {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
   
     .countdown-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      max-width: 320px;
+      gap: 0.7rem;
     }
   
     .countdown-item {
-      padding: 1rem 0.5rem;
+      padding: 0.5rem 0.2rem;
     }
   
     .countdown-number {
-      font-size: 2rem;
-      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
     }
   
     .countdown-label {
-      font-size: 0.75rem;
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
     }
   
     .gallery-grid {
@@ -647,5 +678,91 @@
     .countdown-label {
       font-size: 0.7rem;
     }
+  }
+  
+  @media (max-width: 600px) {
+    .hero-content {
+      margin-top: 2rem;
+    }
+  }
+  
+  @font-face {
+    font-family: 'Blank Script';
+    src: url('./fonts/Blank Script.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .hero-title,
+  .section-header h2,
+  h1, h2, h3 {
+    font-family: 'Blank Script', 'Playfair Display', 'Crimson Text', Georgia, serif;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+  }
+  
+  .rsvp-button {
+    display: inline-block;
+    background: #8b7355;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 2rem 0;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .rsvp-button:hover {
+    background: #6b5b47;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  
+  .map-button {
+    display: inline-block;
+    background: #8b7355;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+  }
+  .map-button:hover {
+    background: #6b5b47;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+  
+  .detail-button {
+    display: inline-block;
+    background: #8b7355;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 40px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+  }
+  .detail-button:hover {
+    background: #6b5b47;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   }
   

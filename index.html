@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Dámaris & Edgar - 23 de Mayo 2026</title>
+    <title>Boda de Edgar & Dámaris - 23 de Mayo 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -29,8 +29,7 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="heart-icon">♥</div>
-            <h1 class="hero-title">Dámaris & Edgar</h1>
+            <h1 class="hero-title">Edgar & Dámaris</h1>
             <p class="hero-date">23 de Mayo, 2026</p>
             <div class="scroll-indicator">
                 <a href="#details" class="scroll-arrow">↓</a>
@@ -94,75 +93,67 @@
             
             <div class="details-grid">
                 <div class="detail-card">
-                    <div class="detail-icon">📅</div>
-                    <h3>Fecha y Hora</h3>
-                    <p class="detail-main">23 de Mayo, 2026</p>
-                    <p class="detail-sub">🕐 17:00 hrs</p>
+                    <div class="detail-header">
+                        <span class="detail-icon">📅</span>
+                        <h3>Fecha y Hora</h3>
+                    </div>
+                    <p class="detail-main">23 de Mayo, 2026 · 🕐 17:00 hrs</p>
+                    <p class="detail-sub">Se ruega puntualidad.</p>
+                    <div class="calendar-button-container">
+                        <button onclick="addToCalendar()" class="detail-button">
+                            Añadir al Calendario
+                        </button>
+                    </div>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="detail-icon">📍</div>
-                    <h3>Lugar</h3>
+                    <div class="detail-header">
+                        <span class="detail-icon">📍</span>
+                        <h3>Lugar</h3>
+                    </div>
                     <p class="detail-main">Torre del Pla</p>
                     <p class="detail-sub">Ctra. de l'Ametlla</p>
                     <p class="detail-sub">08520 Llerona, Barcelona</p>
+                    <a href="https://maps.app.goo.gl/PYHwFmxha1ddrp5v6" target="_blank" rel="noopener" class="detail-button">Ver en Google Maps</a>
                 </div>
-                
                 <div class="detail-card">
-                    <div class="detail-icon">👔</div>
-                    <h3>Dress Code</h3>
+                    <div class="detail-header">
+                        <span class="detail-icon">🚌</span>
+                        <h3>Transporte</h3>
+                    </div>
+                    <p class="detail-main">Autobús ida y vuelta</p>
+                    <p class="detail-sub">Salida: 16:00 desde Plaza Mayor</p>
+                    <p class="detail-sub">Regreso: 02:00 desde la finca</p>
+                    <p class="detail-note">Indica en el RSVP si necesitas el autobús</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">🏨</span>
+                        <h3>Hospedaje</h3>
+                    </div>
+                    <p class="detail-main">Recomendaciones para invitados:</p>
+                    <p class="detail-sub">• Hotel Villa Madrid (10% descuento)</p>
+                    <p class="detail-sub">• Casa Rural El Descanso</p>
+                    <p class="detail-sub">• Apartamentos Centro</p>
+                    <p class="detail-note">Contacta con nosotros para más información</p>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <span class="detail-icon">👔</span>
+                        <h3>Dress Code</h3>
+                    </div>
                     <p class="detail-main">Formal</p>
-                    <p class="detail-sub">Evitar el color blanco</p>
-                    <p class="detail-sub">Zapatos cómodos recomendados</p>
+                    <p class="detail-sub">Se deben evitar vestidos de color blanco.</p>
+                    <p class="detail-sub">Recomendamos traer alguna prenda de abrigo ligero para la noche.</p>
                 </div>
             </div>
 
             <!-- Map -->
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.0364668967613!2d2.2819501!3d41.65495409999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c605a44bed8f%3A0xc7b3a87f33f79620!2sTorre%20del%20Pla!5e0!3m2!1ses!2ses!4v1749636484116!5m2!1ses!2ses"
-                    class="map-iframe"
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+            <!-- (Eliminado el iframe del mapa, ahora solo hay botón en la tarjeta de Lugar) -->
 
             <!-- Transport and Accommodation -->
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-header">
-                        <div class="info-icon">🚌</div>
-                        <h3>Transporte</h3>
-                    </div>
-                    <div class="info-content">
-                        <p><strong>Autobús ida y vuelta:</strong></p>
-                        <p>Salida: 16:00 desde Plaza Mayor</p>
-                        <p>Regreso: 02:00 desde la finca</p>
-                        <p class="info-note">Indica en el RSVP si necesitas el autobús</p>
-                    </div>
-                </div>
-                
-                <div class="info-card">
-                    <div class="info-header">
-                        <div class="info-icon">🏨</div>
-                        <h3>Hospedaje</h3>
-                    </div>
-                    <div class="info-content">
-                        <p><strong>Recomendaciones para invitados:</strong></p>
-                        <p>• Hotel Villa Madrid (10% descuento)</p>
-                        <p>• Casa Rural El Descanso</p>
-                        <p>• Apartamentos Centro</p>
-                        <p class="info-note">Contacta con nosotros para más información</p>
-                    </div>
-                </div>
-            </div>
+            <!-- (Tarjetas de transporte y hospedaje ahora están en details-grid) -->
 
-            <div class="calendar-button-container">
-                <button onclick="addToCalendar()" class="calendar-button">
-                    📅 Añadir al Calendario
-                </button>
-            </div>
+            <!-- (Botón de añadir al calendario ahora está dentro de la tarjeta de Fecha y Hora) -->
         </div>
     </section>
 
@@ -207,12 +198,8 @@
                 <p>Por favor, confirma antes del 15 de Abril de 2026</p>
             </div>
             
-            <div class="form-container">
-                <iframe 
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfkUz97AD1lg1XQgNCRHXr1D3gGSo6wsUflqtaBVmU2cO370Q/viewform?embedded=true"
-                    class="form-iframe">
-                    Cargando…
-                </iframe>
+            <div class="form-container" style="text-align:center;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkUz97AD1lg1XQgNCRHXr1D3gGSo6wsUflqtaBVmU2cO370Q/viewform" target="_blank" rel="noopener" class="rsvp-button">Confirma tu asistencia aquí</a>
             </div>
         </div>
     </section>
@@ -229,24 +216,14 @@
             <div class="gifts-card">
                 <div class="gift-icon">🎁</div>
                 <p class="gifts-intro">
-                    Vuestra presencia en nuestro día especial es el mejor regalo que podemos recibir. Sin embargo, si deseáis hacernos un obsequio, hemos preparado algunas opciones que nos ayudarán a comenzar nuestra nueva vida juntos.
+                    Vuestra presencia en nuestro gran día es el mayor regalo que podemos recibir. Nos hace muchísima ilusión compartir este momento con vosotros y no necesitamos nada más. Si aun así deseáis tener un detalle con nosotros, os invitamos a contribuir a nuestra luna de miel.
                 </p>
-                
-                <div class="gifts-options">
-                    <h3>Opciones de Regalo:</h3>
-                    <div class="gift-option">
-                        <p><strong>Lista de bodas:</strong> El Corte Inglés</p>
-                    </div>
-                    <div class="gift-option">
-                        <p><strong>Contribución luna de miel:</strong></p>
-                        <div class="bank-details">
-                            <p>IBAN: ES12 3456 7890 1234 5678 9012</p>
-                            <p>Concepto: "Boda Dámaris y Edgar"</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <p class="gifts-thanks">Gracias por formar parte de nuestro día especial</p>
+                <p class="gifts-intro">
+                    ¡Gracias por acompañarnos en este capítulo tan especial de nuestra historia!
+                </p>
+                <p class="gifts-intro">
+                    Por privacidad, no ponemos el número de cuenta aquí, pero os lo facilitaremos encantados si os ponéis en contacto con nosotros. También podéis hacer vuestra aportación por Bizum.
+                </p>
             </div>
         </div>
     </section>
@@ -254,8 +231,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="heart-icon">♥</div>
-            <p class="footer-names">Dámaris & Edgar</p>
+            <p class="footer-names">Edgar & Dámaris</p>
             <p class="footer-date">23 de Mayo, 2026</p>
             <p class="footer-message">¡Nos vemos en nuestra boda!</p>
         </div>
