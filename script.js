@@ -86,32 +86,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   `
   document.head.appendChild(style)
   
-  // Intersection Observer for animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
-  }
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1"
-        entry.target.style.transform = "translateY(0)"
-      }
-    })
-  }, observerOptions)
-  
-  // Observe elements for animation
-  document.addEventListener("DOMContentLoaded", () => {
-    const animateElements = document.querySelectorAll(".detail-card, .info-card, .gallery-item")
-    animateElements.forEach((el) => {
-      el.style.opacity = "0"
-      el.style.transform = "translateY(20px)"
-      el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
-      observer.observe(el)
-    })
-  })
-  
   // Video background handling
   document.addEventListener("DOMContentLoaded", () => {
     const heroVideo = document.querySelector(".hero-video")
@@ -160,45 +134,4 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       heroVideo.playsInline = true
     }
   })
-  
-  // Flip card logic for details section
-  function setupDetailCards() {
-    const grid = document.querySelector('.details-grid');
-    const cards = document.querySelectorAll('.detail-card');
-  
-    cards.forEach(card => {
-      card.addEventListener('click', function (e) {
-        // Solo activa si no está ya girada y no se hace click en el botón X
-        if (!card.classList.contains('flipped') && !e.target.classList.contains('close-card')) {
-          cards.forEach(c => c.classList.remove('flipped'));
-          card.classList.add('flipped');
-          grid.classList.add('overlay-active');
-          e.stopPropagation();
-        }
-      });
-      // Botón X para cerrar
-      card.querySelector('.close-card').addEventListener('click', function (e) {
-        card.classList.remove('flipped');
-        grid.classList.remove('overlay-active');
-        e.stopPropagation();
-      });
-    });
-    // Cerrar al hacer click fuera de la tarjeta
-    document.addEventListener('click', function (e) {
-      if (grid.classList.contains('overlay-active')) {
-        cards.forEach(c => c.classList.remove('flipped'));
-        grid.classList.remove('overlay-active');
-      }
-    });
-    // Evitar que el click dentro de la tarjeta cierre la tarjeta
-    cards.forEach(card => {
-      card.querySelector('.card-back').addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
-      card.querySelector('.card-front').addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
-    });
-  }
-  document.addEventListener('DOMContentLoaded', setupDetailCards);
   
