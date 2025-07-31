@@ -166,6 +166,23 @@
     max-width: 800px;
   }
   
+  /* Responsive design for story section */
+  @media (max-width: 768px) {
+    .story-content {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .story-content {
+      padding: 0 1rem;
+    }
+    
+    .story-text-new div {
+      padding: 0 0.5rem;
+    }
+  }
+  
   /* Countdown Section */
   .countdown-section {
     padding: 5rem 0;
