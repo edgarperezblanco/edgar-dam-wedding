@@ -135,29 +135,3 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   })
   
-  // Trailer video fullscreen handling
-  document.addEventListener("DOMContentLoaded", () => {
-    const trailerVideo = document.getElementById("trailer-video")
-    
-    if (trailerVideo) {
-      let hasGoneFullscreen = false
-      
-      // Go to fullscreen only the first time play is pressed
-      trailerVideo.addEventListener("play", () => {
-        if (!hasGoneFullscreen) {
-          hasGoneFullscreen = true
-          
-          if (trailerVideo.requestFullscreen) {
-            trailerVideo.requestFullscreen()
-          } else if (trailerVideo.webkitRequestFullscreen) {
-            trailerVideo.webkitRequestFullscreen()
-          } else if (trailerVideo.mozRequestFullScreen) {
-            trailerVideo.mozRequestFullScreen()
-          } else if (trailerVideo.msRequestFullscreen) {
-            trailerVideo.msRequestFullscreen()
-          }
-        }
-      })
-    }
-  })
-  
